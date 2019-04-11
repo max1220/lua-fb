@@ -2,6 +2,7 @@ lua-fb
 -------
 
 Use drawbuffers on the linux framebuffer!
+You should include this directory in both your lua path and cpath.
 This library enables getting information about a framebuffer device, and
 drawing to it using drawbuffers. For details about some of the fields
 mentioned here, please look at the relevant kernel documentation.

@@ -211,7 +211,7 @@ static int lfb_framebuffer_draw_from_drawbuffer(lua_State *L) {
 				pixel = getcolor_32bpp(fb, p.r, p.g, p.b);
 			}
             
-            if (x+cx < 0 || y+cy < 0 || x+cx > (int)fb->vinfo.xres || y+cy > (int)fb->vinfo.yres || p.a <= 1) {
+            if (x+cx < 0 || y+cy < 0 || x+cx > (int)fb->vinfo.xres || y+cy > (int)fb->vinfo.yres || p.a < 1) {
                 continue;
             } else {
                 location = (x + cx + fb->vinfo.xoffset) * (fb->vinfo.bits_per_pixel/8) + (y + cy + fb->vinfo.yoffset) * fb->finfo.line_length;
@@ -274,7 +274,7 @@ static int lfb_new(lua_State *L) {
 
 
 
-LUALIB_API int luaopen_lfb(lua_State *L) {
+LUALIB_API int luaopen_fb_lua_fb(lua_State *L) {
     lua_newtable(L);
 
     LUA_T_PUSH_S_S("version", VERSION)

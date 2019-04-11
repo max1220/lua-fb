@@ -1,6 +1,6 @@
 #!/usr/bin/env luajit
-local ldb = require("ldb")
-local lfb = require("lfb")
+local ldb = require("lua-db")
+local lfb = require("lua-fb")
 
 print("creating db")
 local db = ldb.new(100,100)
