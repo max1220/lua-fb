@@ -1,6 +1,8 @@
 lua-fb
 -------
 
+Now deprecated. v3 of lua-db has this integrated as an optional module, since this is only usefull in combination with lua-db.
+
 Use drawbuffers on the linux framebuffer!
 You should include this directory in both your lua path and cpath.
 This library enables getting information about a framebuffer device, and
